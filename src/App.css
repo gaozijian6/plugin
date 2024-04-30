@@ -1,0 +1,10 @@
+blockquote{
+    /* 斜体，灰色 */
+    font-style: italic;
+    color: #666;
+}
+.active{
+    /* 激活状态 */
+    color: red;
+}
+
