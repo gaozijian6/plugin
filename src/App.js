@@ -43,7 +43,7 @@ const isBlockActive = (editor, format) => {
       match: n =>
         !Editor.isEditor(n) &&
         SlateElement.isElement(n) &&
-        n['type'] === format,
+        n.type === format,
     })
   )
   return !!match
