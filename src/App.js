@@ -35,7 +35,7 @@ const toggleBlock = (editor, format) => {
 
 }
 
-const isBlockActive = (editor, format, blockType = 'type') => {
+const isBlockActive = (editor, format) => {
   const { selection } = editor
   if (!selection) return false
   const [match] = Array.from(
@@ -43,7 +43,7 @@ const isBlockActive = (editor, format, blockType = 'type') => {
       match: n =>
         !Editor.isEditor(n) &&
         SlateElement.isElement(n) &&
-        n[blockType] === format,
+        n['type'] === format,
     })
   )
   return !!match
